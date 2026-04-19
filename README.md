@@ -6,6 +6,16 @@ An in-depth analysis of the Transjakarta Bus Rapid Transit (BRT) network using G
 ## 📝 Project Description
 This project constructs a graph representation of the Transjakarta operational system, where bus stops function as nodes and bus trips as edges. By analyzing this network structure, we can identify crucial hubs within Jakarta's transit system and measure how efficiently passengers can navigate from one point to another.
 
+## 📂 Project Structure
+
+```text
+├── data/               # GTFS source files (.txt)
+├── notebooks/          # Analysis & Graph modeling (.ipynb)
+├── .gitignore          # Files to exclude from Git
+├── README.md           # Documentation
+└── requirements.txt    # Required libraries
+```
+
 ## ✨ Key Features
 - **GTFS Data Integration**: Processing core GTFS components including `stops.txt`, `stop_times.txt`, `trips.txt`, and `routes.txt` into a unified data structure.
 - **Network Graph Construction**: Building directed graphs representing connections between stops based on actual bus trip schedules.
@@ -13,16 +23,41 @@ This project constructs a graph representation of the Transjakarta operational s
 - **Efficiency & Robustness Evaluation**: Calculating global network efficiency and simulating the impact of critical node removal on system flow.
 - **Corridor Metadata Mapping**: Integrating corridor names to provide operational context to the technical analysis.
 
-## 🛠️ Tech Stack & Implementation
-- **Programming Language**: Python 3.x
-- **Network Science**: NetworkX (for graph modeling and centrality metric calculations).
-- **Data Manipulation**: Pandas (for GTFS data cleaning and transformation).
-- **Environment**: Google Colab.
+## 🛠️ Tech Stack
+- **Language**: Python 3.x
+- **Network Science**: NetworkX
+- **Data Manipulation**: Pandas
+- **Environment**: Google Colab / Local Jupyter
 
 ## 📊 Methodology
 - **Data Logic**: Utilizing `stops` as nodes and `stop_times` to establish relationships based on trip sequences.
 - **Graph Modeling**: Implementing `DiGraph` (Directed Graph) to reflect specific bus travel directions.
 - **Critical Node Analysis**: Measuring which stops most frequently act as bridges between different routes (high betweenness), representing potential bottlenecks.
+
+## ⚙️ Installation & Usage
+
+### 1. Prerequisites
+
+Ensure you have the following GTFS files in your `data/` directory:
+
+  - `stops.txt`, `stop_times.txt`, `trips.txt`, `routes.txt`
+
+### 2. Setup Environment
+
+```bash
+# Clone the repository
+git clone https://github.com/Billy1205/transjakarta-network-analysis.git
+cd transjakarta-network-analysis
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 3. Running the Analysis
+
+1.  Open the notebook in the `notebooks/` folder.
+2.  Ensure the file paths to the GTFS `.txt` files are correctly pointed to the `data/` folder.
+3.  Run all cells to generate centrality rankings and efficiency visualizations.
 
 ***
 
@@ -45,14 +80,31 @@ Proyek ini membangun representasi graf dari sistem operasional Transjakarta, di 
 - **Programming Language**: Python 3.x
 - **Network Science**: NetworkX (untuk pemodelan graf dan perhitungan metrik sentralitas).
 - **Data Manipulation**: Pandas (untuk pembersihan dan transformasi data GTFS).
-- **Environment**: Google Colab.
 
 ## 📊 Methodology
 - **Data Logic**: Menggunakan `stops` sebagai titik pemberhentian dan `stop_times` sebagai pembentuk relasi antar titik berdasarkan urutan perjalanan.
 - **Graph Modeling**: Implementasi graf menggunakan `DiGraph` (Directed Graph) untuk mencerminkan arah perjalanan bus yang spesifik.
 - **Critical Node Analysis**: Mengukur halte mana yang paling sering menjadi jembatan antar rute berbeda (high betweenness), yang berpotensi menjadi titik kemacetan jika terjadi gangguan.
 
-## ⚙️ Installation & Usage
-- **Data Prep**: Pastikan file standar GTFS (`stops.txt`, `stop_times.txt`, dll) tersedia di direktori kerja.
-- **Requirements**: Instalasi pustaka melalui `pip install pandas networkx`.
-- **Execution**: Jalankan notebook untuk melihat hasil analisis efisiensi jaringan secara otomatis.
+## ⚙️ Instalasi & Penggunaan
+
+### 1. Prasyarat
+Pastikan file standar GTFS berikut tersedia di folder `data/`:
+`stops.txt`, `stop_times.txt`, `trips.txt`, dan `routes.txt`.
+
+### 2. Persiapan Lingkungan
+
+```bash
+# Klon repositori
+git clone https://github.com/Billy1205/transjakarta-network-analysis.git
+cd transjakarta-network-analysis
+
+# Instal pustaka yang diperlukan
+pip install -r requirements.txt
+```
+
+### 3. Menjalankan Analisis
+
+1.  Buka notebook di dalam folder `notebooks/`.
+2.  Pastikan jalur file (path) ke data GTFS sudah benar.
+3.  Jalankan semua sel untuk melihat skor sentralitas halte dan efisiensi jaringan.
