@@ -46,8 +46,8 @@ Ensure you have the following GTFS files in your `data/` directory:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Billy1205/transjakarta-network-analysis.git
-cd transjakarta-network-analysis
+git clone https://github.com/Billy1205/transjakarta-operational-analysis.git
+cd transjakarta-operational-analysis
 
 # Install dependencies
 pip install -r requirements.txt
@@ -96,8 +96,8 @@ Pastikan file standar GTFS berikut tersedia di folder `data/`:
 
 ```bash
 # Klon repositori
-git clone https://github.com/Billy1205/transjakarta-network-analysis.git
-cd transjakarta-network-analysis
+git clone https://github.com/Billy1205/transjakarta-operational-analysis.git
+cd transjakarta-operational-analysis
 
 # Instal pustaka yang diperlukan
 pip install -r requirements.txt
